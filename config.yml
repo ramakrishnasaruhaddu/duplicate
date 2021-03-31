@@ -79,8 +79,8 @@ ssl:
   dhparam: null
 
   # ++++++ For letsencrypt only ++++++
-  domain: wiki.yourdomain.com
-  subscriberEmail: admin@example.com
+  domain: wiki.ordazzlesample.com
+  subscriberEmail: ramakrishna.sarihaddu@etpgroup.com
 
 # ---------------------------------------------------------------------
 # Database Pool Options
@@ -120,10 +120,13 @@ offline: false
 # same DB (e.g. Kubernetes pods / load balanced instances). Leave false
 # otherwise. You MUST be using PostgreSQL to use this feature.
 
-ha: false
+ha: fa
 
 # ---------------------------------------------------------------------
 # Data Path
 # ---------------------------------------------------------------------
 # Writeable data path used for cache and temporary user uploads.
 dataPath: ./data
+
+
+

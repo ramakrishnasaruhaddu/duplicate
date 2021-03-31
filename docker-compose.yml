@@ -1,0 +1,31 @@
+version: "3"
+services:
+  db:
+    image: postgres:13-alpine
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: etp@1234
+      POSTGRES_USER: postgres
+    logging:
+      driver: "none"
+    restart: unless-stopped
+    volumes:
+      - ./krishna:/var/lib/postgresql/data
+  wiki:
+    image: requarks/wiki:2
+    container_name: wikijs
+    depends_on:
+      - db
+    environment:
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: etp@1234
+      DB_NAME: postgres
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+volumes:
+  db-data:
