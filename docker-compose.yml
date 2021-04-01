@@ -26,6 +26,6 @@ services:
       DB_NAME: postgres
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "5689:3000"
 volumes:
   db-data:
