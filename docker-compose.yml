@@ -14,7 +14,7 @@ services:
       - ./krishna:/var/lib/postgresql/data
   wiki:
     image: requarks/wiki:2
-    container_name: wikijs
+    container_name: ordazzle
     depends_on:
       - db
     environment:
